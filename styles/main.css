@@ -63,3 +63,47 @@
     color: #666;
   }
 
+
+
+
+
+  /* Limit the width of the main element */
+main {
+    max-width: 840px;
+    margin: 0 auto; /* Center the content */
+  }
+  
+  /* Styles for the aside element */
+  aside {
+    width: 20rem;
+    margin: 1rem auto; /* Center the aside */
+    border: 1px solid rgb(0 0 0 / 0.2); /* Transparent border */
+    padding: 1rem;
+    background-color: #eee; /* Light background */
+    color: #333; /* Dark text */
+    text-align: center; /* Center-aligned text */
+  }
+  
+  /* Style for the image inside the aside */
+  aside img {
+    width: 200px;
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  /* Exclusive selector for the image inside main */
+  main img {
+    width: 150px;
+    height: auto;
+  }
+  
+  /* Remove padding from paragraphs */
+  p {
+    padding: 0;
+  }
+  
+  /* Styles for the footer */
+  footer {
+    margin-top: 15px; /* Space above the footer */
+    border-top: 1px solid #000; /* Top border */
+    text-align: center; /* Center-aligned text */
+  }
