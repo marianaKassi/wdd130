@@ -71,6 +71,7 @@
 main {
     max-width: 840px;
     margin: 0 auto; /* Center the content */
+
   }
   
   /* Styles for the aside element */
@@ -107,3 +108,7 @@ main {
     border-top: 1px solid #000; /* Top border */
     text-align: center; /* Center-aligned text */
   }
+
+
+
+  
