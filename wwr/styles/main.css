@@ -1,0 +1,114 @@
+/* Réinitialisation basique */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  /* En-tête */
+  header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  nav a {
+    color: rgb(77, 106, 179);
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Contenu principal */
+  main {
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  p {
+    margin-top: 20px;
+    text-align: justify;
+  }
+  
+  /* Pied de page */
+  footer {
+    margin-top: 40px;
+    font-size: 0.9em;
+    text-align: center;
+    color: #666;
+  }
+
+
+
+
+
+  /* Limit the width of the main element */
+main {
+    max-width: 840px;
+    margin: 0 auto; /* Center the content */
+
+  }
+  
+  /* Styles for the aside element */
+  aside {
+    width: 20rem;
+    margin: 1rem auto; /* Center the aside */
+    border: 1px solid rgb(0 0 0 / 0.2); /* Transparent border */
+    padding: 1rem;
+    background-color: #eee; /* Light background */
+    color: #333; /* Dark text */
+    text-align: center; /* Center-aligned text */
+  }
+  
+  /* Style for the image inside the aside */
+  aside img {
+    width: 200px;
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  /* Exclusive selector for the image inside main */
+  main img {
+    width: 150px;
+    height: auto;
+  }
+  
+  /* Remove padding from paragraphs */
+  p {
+    padding: 0;
+  }
+  
+  /* Styles for the footer */
+  footer {
+    margin-top: 15px; /* Space above the footer */
+    border-top: 1px solid #000; /* Top border */
+    text-align: center; /* Center-aligned text */
+  }
+
+
+
+  
