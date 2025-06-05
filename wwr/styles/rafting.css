@@ -27,8 +27,8 @@ html {
 
 body {
   font-family: var(--text-font);
-  color: var(--accent1-color);
-  background-color: var(--secondary-color);
+  color: var(--secondary-color);
+  background-color: var(--accent2-color);
   line-height: 1.6;
   padding: 0 1rem;
 }
@@ -56,8 +56,8 @@ footer {
   align-items: center;
   gap: 1rem;
   padding-bottom: 1rem;
-  border-bottom: 2px solid var(--accent2-color);
-  background-color: var(--accent1-color);
+  border-bottom: 2px solid var(--primary-color);
+  background-color: var(--primary-color);
   color: var(--accent2-color);
 }
 
@@ -73,13 +73,13 @@ footer {
 
 .main-nav a {
   text-decoration: none;
-  color: var(--primary-color);
+  color: var(--accent2-color);
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
 .main-nav a:hover {
-  color: var(--accent2-color);
+  color: var(--accent1-color);
 }
 
 /* ================ */
@@ -129,22 +129,11 @@ footer {
 
 .history-text {
   flex: 2;
-
-}
-
-h1 {
-      color: var(--primary-color);
-    border-left: 5px solid var(--primary-color);
-  padding-left: 12px;
-
-
 }
 
 .history-image {
   flex: 1;
   text-align: center;
-
-    
 }
 
 .history-image img {
@@ -152,8 +141,6 @@ h1 {
   height: auto;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-
-
 }
 
 /* ================ */
@@ -200,7 +187,7 @@ h1 {
 figcaption {
   font-size: 0.9rem;
   margin-top: 0.5rem;
-  color: var(--accent1-color);
+  color: var(--secondary-color);
 }
 
 /* ================ */
@@ -213,7 +200,7 @@ footer {
   align-items: center;
   padding: 1rem 0;
   border-top: 1px solid #ccc;
-  color: var(--accent1-color);
+  color: var(--secondary-color);
   font-size: 0.9rem;
 }
 
