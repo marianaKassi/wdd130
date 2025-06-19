@@ -459,11 +459,6 @@ footer {
 }
 
 /* Home Page Styles */
-.hero {
-  position: relative;
-  text-align: center;
-  margin-bottom: 3rem;
-}
 
 .hero img {
   width: 100%;
@@ -471,16 +466,8 @@ footer {
   object-fit: cover;
 }
 
-.hero h1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 3rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  width: 90%;
-}
+
+
 
 .cta-button {
   position: absolute;
