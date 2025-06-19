@@ -23,7 +23,7 @@ body {
   background-color: var(--light);
 }
 
- h2 {
+ h1,h2 , h3{
 font-size: 2.5rem;
   margin-bottom: 3rem;
   color: var(--accent);
