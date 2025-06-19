@@ -24,8 +24,8 @@ body {
 }
 
  h2 {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
+font-size: 2.5rem;
+  margin-bottom: 3rem;
   color: var(--accent);
 }
 
@@ -169,7 +169,7 @@ font-size: 1.1rem;
   padding: 4rem 5%;
   text-align: center;
 }
-.adventure-gallery h2 {
+.adventure-gallery h3 {
   font-size: 2.5rem;
   margin-bottom: 3rem;
   color: var(--accent);
