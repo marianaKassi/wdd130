@@ -1,220 +1,233 @@
-/* ================ */
-/* === CSS Variables === */
-/* ================ */
+/* styles/R.css */
 
 :root {
-  --primary-color: #1E90FF;
-  --secondary-color: #2F4F4F;
-  --accent1-color: #FFA500;
-  --accent2-color: #FFFFFF;
-  --heading-font: 'Poppins', sans-serif;
-  --text-font: 'Open Sans', sans-serif;
+  --primary: #1E90FF;       /* Dodger Blue */
+  --secondary: #2F4F4F;     /* Dark Slate Gray */
+  --accent: #FFA500;        /* Orange */
+  --light: #FFFFFF;         /* White */
+  --dark: #333333;          /* Dark Gray */
+  --gray: #7F8C8D;          /* Gray */
+  --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* ================ */
-/* === Reset Global === */
-/* ================ */
-
+/* Base Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-html {
-  font-size: 16px;
-}
-
 body {
-  font-family: var(--text-font);
-  color: var(--secondary-color);
-  background-color: var(--accent2-color);
+  font-family: 'Open Sans', sans-serif;
   line-height: 1.6;
-  padding: 0 1rem;
+  color: var(--dark);
+  background-color: var(--light);
 }
 
-/* ================ */
-/* === Layout Centered === */
-/* ================ */
+ h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: var(--accent);
+}
 
-header,
-main,
-footer {
-  width: 840px;
+img {
   max-width: 100%;
-  margin: 0 auto;
-  padding: 1rem 0;
+  height: auto;
 }
-
-/* ================ */
-/* === Header Styles (Grid) === */
-/* ================ */
-
+/* Header Styles */
 .site-header {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: auto 1fr;
   align-items: center;
-  gap: 1rem;
-  padding-bottom: 1rem;
-  border-bottom: 2px solid var(--primary-color);
-  background-color: var(--primary-color);
-  color: var(--accent2-color);
+  padding: 1rem 5%;
+  background-color: var(--primary);
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .site-header img {
-  height: 60px;
+  height: 80px;
+  transition: transform 0.3s;
+}
+.site-header img:hover {
+  transform: scale(1.05);
 }
 
 .main-nav ul {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
+  gap: 2rem;
   list-style: none;
 }
 
 .main-nav a {
   text-decoration: none;
-  color: var(--accent2-color);
-  font-weight: bold;
-  transition: color 0.3s ease;
+  color: var(--light);
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  position: relative;
+  transition: color 0.3s;
+}
+.main-nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--accent);
+  transition: width 0.3s;
 }
 
 .main-nav a:hover {
-  color: var(--accent1-color);
+  color: var(--primary);
 }
 
-/* ================ */
-/* === Hero Section === */
-/* ================ */
+.main-nav a:hover::after {
+  width: 100%;
+}
 
+/* Hero Section */
 .hero {
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
-  margin-bottom: 2rem;
-  background-color: var(--accent2-color);
-}
-
-.hero-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  background-color: rgba(255, 255, 255, 0.85);
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.social-link img {
-  width: 30px;
-  height: 30px;
-  transition: transform 0.3s ease;
-}
-
-.social-link img:hover {
-  transform: scale(1.1);
-}
-
-/* ================ */
-/* === History Section === */
-/* ================ */
-
-.history-section {
-  margin-bottom: 2rem;
-}
-
-.history-container {
-  display: flex;
-  gap: 2rem;
-}
-
-.history-text {
-  flex: 2;
-}
-
-.history-image {
-  flex: 1;
+  padding: 3rem 5%;
   text-align: center;
 }
 
-.history-image img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+.hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
 }
+.hero p {
 
-/* ================ */
-/* === Adventure Gallery === */
-/* ================ */
-
-.adventure-gallery {
+font-size: 1.1rem;
   margin-bottom: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.social-link img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s;
 }
 
+.social-link img:hover {
+  transform: scale(1.1) rotate(10deg);
+}
+/* History Section */
+.history-section {
+  padding: 4rem 5%;
+  background-color: #f8f9fa;
+}
+
+.history-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.history-text h1 {
+  color: var(--accent);
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.history-text h1::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 80px;
+  height: 4px;
+  background-color: var(--accent);
+}
+.history-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+
+  text-align: justify;
+  line-height: 1.6;
+}
+
+.history-image img {
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  transition: transform 0.5s;
+}
+
+.history-image img:hover {
+  transform: scale(1.02);
+}
+
+/* Adventure Gallery */
+.adventure-gallery {
+  padding: 4rem 5%;
+  text-align: center;
+}
 .adventure-gallery h2 {
-  font-family: var(--heading-font);
-  color: var(--primary-color);
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  border-left: 5px solid var(--primary-color);
-  padding-left: 12px;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: var(--accent);
 }
 
 .gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .gallery figure {
   margin: 0;
-  text-align: center;
-  flex: 1 1 calc(20% - 1rem);
-  min-width: 180px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s;
+}
+.gallery figure:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .gallery img {
   width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  height: 200px;
+  object-fit: cover;
 }
 
-.gallery img:hover {
-  transform: scale(1.05);
+.gallery figcaption {
+  background-color: var(--primary);
+  color: var(--light);
+  padding: 0.8rem;
+  font-weight: 600;
 }
-
-figcaption {
-  font-size: 0.9rem;
-  margin-top: 0.5rem;
-  color: var(--secondary-color);
-}
-
-/* ================ */
-/* === Footer Styles === */
-/* ================ */
-
 footer {
+  background-color: var(--primary);
+  color: var(--light);
+  padding: 2rem 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 0;
-  border-top: 1px solid #ccc;
-  color: var(--secondary-color);
-  font-size: 0.9rem;
+  flex-wrap: wrap;
 }
-
 .socialmedia {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
 }
-
+.socialmedia a {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+}
 .socialmedia img {
-  width: 30px;
-  height: 30px;
-  transition: transform 0.3s ease;
+  width: 100%;
+  height: 100%;
 }
 
-.socialmedia img:hover {
-  transform: scale(1.1);
-}
